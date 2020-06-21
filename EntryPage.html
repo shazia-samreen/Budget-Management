@@ -1,0 +1,142 @@
+<html>		
+<body>
+<form action=sample.com method=post>
+<h1>CREATE NEW BUDGET</h1>
+<h2>Income Categories </h2>
+<div class=addition><input type=button value=+addCategory onclick=transitionf('addtoscreen','newnode')></div>
+<div class=addtoscreen>
+<h3 class=newnode>
+<input type=hidden name=cname1 id=cname1 value=Salary>
+<input type=hidden name=aname1 id=aname1 value=>
+<div class=text>Salary<div class=valu></div></div><div class=button><input type=button class=bname value=addamount onclick=myfunction("newnode","addtoscreen")></div>
+</h3>
+<h3 class=newnode1>
+<input type=hidden name=cname2 id=cname2 value=Otherincome>
+<input type=hidden name=aname2 id=aname2 value=>
+<div class=text>Other Income:<div class=valu></div></div>
+<div class=button><input type=button value=addamount class=bname onclick=myfunction("newnode1","addtoscreen")></div></h3>
+</div> 
+<h2>Budgeted expenses categories</h2>
+<div class=addition><input type=button value=+addCategory onclick=transitionf('addition1','newnode2')></div>
+<div class=addition1>
+<h3 class=newnode2>
+<input type="hidden" name=cname3 id=cname3 value=Rent>
+<input type="hidden" name=aname3 id=aname3 value=>
+<div class=text>Rent<div class=valu></div></div>
+<div class=button><input type=button value=addamount class=bname onclick=myfunction('newnode2','addition1')></div></h3>
+<h3 class=newnode3>
+<input type="hidden" name=cname4 id=cname4 value=Daily Living>
+<input type="hidden" name=aname4 id=aname4 value=>
+<div class=text>Daily Living<div class=valu></div></div>
+<div class=button><input type=button value=addamount class=bname onclick=myfunction('newnode3','addition1')></div></h3>
+<h3 class=newnode4>
+<input type="hidden" name=cname5 id=cname5 value=Transportation>
+<input type="hidden" name=aname5 id=aname5 value=>
+<div class=text>Transportaion<div class=valu></div></div>
+<div class=button><input type=button value=addamount class=bname onclick=myfunction('newnode4','addition1')></div></h3>
+<h3 class=newnode5>
+<input type="hidden" name=cname6 id=cname6 value=Entertainment>
+<input type="hidden" name=aname6 id=aname6 value=>
+<div class=text>Entertainment<div class=valu></div></div>
+<div class=button><input type=button value=addamount class=bname onclick=myfunction('newnode5','addition1')></div></h3>
+<h3 class=newnode6>
+<input type="hidden" name=cname7 id=cname7 value=Health Care>
+<input type="hidden" name=aname7 id=aname7 value=>
+<div class=text>Health Care<div class=valu></div></div>
+<div class=button><input type=button value=addamount class=bname onclick=myfunction('newnode6','addition1')></div></h3>
+<h3 class=newnode7>
+<input type="hidden" name=cname8 id=cname8 value=Financial Savings>
+<input type="hidden" name=aname8 id=aname8 value=>
+<div class=text>Financial Savings<div class=valu></div></div>
+<div class=button><input type=button value=addamount class=bname onclick=myfunction('newnode7','addition1')></div></h3>
+</div>
+<div class=model id=m1>
+<div class=model1 id=m2><div class=catname></div><div class=carname></div>
+<img src=image4.png alt='HELLO' class=sizeadjust id=imageid>
+<input type=text  class=textbdecoration placeholder=CategoryName id=cname>
+<input type=text  class=textbdecoration placeholder=Amount id=amount>
+<input type=button value=submit onclick=revtransitionf(event)>
+</div>
+</div>
+<input type=submit>
+</form>
+</body>
+<head>		
+<style>
+		.valu{
+			display:inline;
+		}
+		.catname{
+			color:white;
+		}
+		.carname{
+			color:white;
+		}
+		.sizeadjust{
+		width:120px;
+		height:120px;
+		}
+		.textbdecoration{
+		display:block;
+		margin:15px auto;
+		border: 1px solid gray;
+		width:40%;
+		height:10%;
+		}
+		.model{
+		background-color:rgba(255,255,255,0.5);
+		width: 100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		}
+		.model1{
+		height: 300px;
+		width: 500px;
+		background-color:white;
+		text-align:center;
+		padding:20px;
+		border-radius:4px;
+		}
+		body{
+		background:url(mypage.jpeg);
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		padding:4%;
+		}
+		h1{
+		text-align:center;
+		font-size:35px;
+		color:white;
+		}
+		h2{
+		color:white;
+		font-size:25px;
+		margin-left:25%;
+		text-decoration:underline;
+		}
+		.addition{
+		display:inline;
+		margin-left:25%;
+		}
+		h3{
+		font-size:20px;
+		border:1px solid white;
+		height:10%;
+		width:50%;
+		padding:10px;
+		text-align:center;
+		margin-left:25%;
+		}
+		.button{
+		display:block;
+		margin:10px 20px;
+		}
+</style>
+<script type="text/javascript" src="jsfile1.js"></script>
+</head>
+</html>

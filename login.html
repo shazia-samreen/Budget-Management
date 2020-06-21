@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <script type="text/javascript">
+	   function check()
+	   {
+		   emid=document.getElementById("EMAIL").value;
+		   pwd=document.getElementById("PWD").value;
+			
+			if(emid!="" && emid!=null)
+			{
+				if(pwd!="" && pwd!=null)
+				{
+
+				}
+				else
+				{
+					alert("Please do not leave password empty..");
+				}
+			}
+			else
+			{
+				alert("Please do not leave email-id field empty..");
+			}	
+	   }
+	</script>
+	<style>
+	     img{
+		height:30%;
+		margin-left:600px;
+	       }
+	    .button{
+		    background-color: lightgrey;
+			color: black;
+			text-align: center;
+			transition: all 0.5s;
+			font-size:20px;
+			cursor: pointer;
+			width:120px;
+			height:40px;  
+			}
+		.button span{
+			  cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition: 0.5s;
+				float:right;
+				font-family:Arial Rounded MT;
+			}
+		.button:hover span{
+				padding-right:25px;
+			}
+	</style>
+  </head>
+  <body text=white background=login-bg.jpg>
+	<form action=login.com method=get>
+  	  <h1 align=center><font face="Book Antiqua"><b>Login Here</b></font></h1>  <hr> <br>
+	<!-- <marquee scrollamount=20 behaviour="alternate" width=100% direction="left" loop=10>
+	 <h2>Login form here</h2></marquee> -->
+	<h4>
+	 <img src="login-icon.png" alternate="Login Here" align=center>	 
+	</h4>
+	<table align=center  width=40% height=30% >
+		 
+	  <tr><td><h2><font face="Maiandra GD">Enter email-Id:</font></h2></td>
+	  <td><input type=text size=30 id="EMAIL" name="EMAIL"></td></tr>
+		
+		<tr><td><h2><font face="Maiandra GD">Enter Password:</font></h2></td>
+	  <td><input type=password size=30 id="PWD" name="PWD"></td></tr>
+
+
+	  <tr><td></td><td><input type=submit OnClick="check()"></td></tr>
+		
+	  </table>
+	</form>
+  </body>
+</html>

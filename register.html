@@ -1,0 +1,160 @@
+<html>
+  <head>
+    <script type="text/javascript">
+	   
+	   function validate(form)
+	   {
+		   var name=document.forms[0].NAME.value;
+		   var age=document.forms['myform']['AGE'].value;
+		   var phno=document.forms['myform']['PHNO'].value;
+		   var emid=document.forms['myform']['EMAIL'].value;
+		   var pwd=document.forms['myform']['PWD'].value;
+		   var rpwd=document.forms['myform']['RPWD'].value;
+		   var cond=document.forms['myform']['COND'].value;
+		   
+		   if(name!="" && name!=null)
+		   {
+				if(age!="" && age!=null)
+				{
+					var b=/^[1-9][0-9]{0,2}$/;
+					if(b.exec(age))
+					{
+						if(phno!="" && phno!=null)
+						{
+							var a=/^[9|8|7|6][0-9]{9}$/;
+							if(a.exec(phno))
+							{
+								if(emid!="" && emid!=null)
+								{
+									var c=/^[A-Za-z0-9][A-Za-z0-9_]*[@][a-z]+[.][com]/;
+									if(c.exec(emid))
+									{
+										if(pwd!="" && pwd!=null)
+										{
+											if(rpwd!="" && rpwd!=null)
+											{
+												if(rpwd==pwd)
+												{
+													return(true);
+												}
+												else
+												{
+													alert("Password not matched with confirmation password");
+													return false;
+												}
+											}
+											else
+											{
+												alert("Please do not leave confirm password field empty..");
+												return false;
+											}
+										}
+										else
+										{
+											alert("Please do not leave password empty..");
+														   return false;
+										}
+									}
+									else
+									{
+										alert("Please enter valid email-Id..");
+													   return false;
+									}
+								}
+								else
+								{
+									alert("Please do not leave email-id field empty..");
+												   return false;
+								}	
+							}
+							else
+							{
+								alert("Enter valid phone number..");
+											   return false;
+							}
+						}
+						else
+						{
+							alert("Please do not leave phone number field empty..!");
+										   return false;
+						}
+					}
+					else
+					{
+						alert("Please enter correct age..!");
+									   return false;
+					}
+				}
+				else
+				{
+					alert("Please do not leave age field empty..!");
+								   return false;
+				}
+		   }
+		   else
+		   {
+			   alert("Please do not leave name field empty..!");
+			   return false;
+		   }
+	   }
+	</script>
+	<style>
+	    .button{
+		    background-color: lightgrey;
+			color: black;
+			text-align: center;
+			transition: all 0.5s;
+			font-size:20px;
+			cursor: pointer;
+			width:120px;
+			height:40px;  
+			}
+		.button span{
+			  cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition: 0.5s;
+				float:right;
+			}
+		.button:hover span{
+				padding-right:25px;
+			}
+	</style>
+  </head>
+  <body background=register-bg.jpg text=white style="background-repeat:no-repeat; background-size:100% 100%;">
+  	 
+	 <form name="myform" action="register.com" onsubmit="return validate()" method="get" >
+	 
+	 <h1 align=center> Register Here</h1>
+	 
+	 <marquee scrollamount=20 behaviour="alternate" width=100% direction="left" loop=10>
+	 <h2>Please fill the form</h2></marquee>
+	 
+	 <table align=left border=0% width=40% height=80%>
+	   
+	   <tr><td><h2>Enter Name:</h2></td>
+	  <td><input type=text size=30 name="NAME"></td></tr>
+
+	   <tr><td><h2>Enter Age:</h2></td>
+	  <td> <input type=text size=30  name="AGE"> </td></tr>
+	  
+	  <tr><td><h2>Enter Phone number:</h2></td>
+	  <td><input type=text size=30 name="PHNO"></td></tr>
+		 
+	  <tr><td><h2>Enter email-Id:</h2></td>
+	  <td><input type=text size=30  name="EMAIL"></td></tr>
+		
+		<tr><td><h2>Enter Password:</h2></td>
+	  <td><input type=password size=30 name="PWD"></td></tr>
+
+	  	  <tr><td><h2>Confirm Password:</h2></td>
+	  <td><input type=password size=30  name="RPWD"></td></tr>
+
+	  <tr><td align=right><input type=checkbox  name="COND" checked></td><td><h3>Accept out Terms and Conditions</h3></td></tr>
+
+	<tr><td></td><td><input type="submit" value="Submit"><span></span></td></tr>
+
+	  </table>
+	  </form>
+  </body>
+</html>
