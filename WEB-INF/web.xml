@@ -1,0 +1,74 @@
+<web-app>
+  <servlet>
+    <servlet-name>LogServlet</servlet-name>
+    <servlet-class>LoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LogServlet</servlet-name>
+    <url-pattern>/login.com</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RegServlet</servlet-name>
+    <servlet-class>RegisterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>RegServlet</servlet-name>
+    <url-pattern>/register.com</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>INS</servlet-name>
+    <servlet-class>InsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>INS</servlet-name>
+    <url-pattern>/inside.com</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LServlet</servlet-name>
+    <servlet-class>LastServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LServlet</servlet-name>
+    <url-pattern>/last.com</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DServlet</servlet-name>
+    <servlet-class>addDate</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DServlet</servlet-name>
+    <url-pattern>/adate.com</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SamServlet</servlet-name>
+    <servlet-class>sample</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SamServlet</servlet-name>
+    <url-pattern>/sample.com</url-pattern>
+  </servlet-mapping>
+
+
+ <servlet>
+    <servlet-name>TServlet</servlet-name>
+    <servlet-class>TransServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>TServlet</servlet-name>
+    <url-pattern>/trans.com</url-pattern>
+  </servlet-mapping>
+
+  
+</web-app>    
